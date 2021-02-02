@@ -20,7 +20,7 @@
 
 # Apache Spark on Dataproc - Datalake Demo
 
-The collection of notebooks illustrates a financial services company build a data lake on Google Cloud using Spark and Dataproc. The team consists of data enginers, data analysts and data scientists who work together to process raw data and enrich it by predicting fradulent transactions.
+The collection of notebooks illustrates a financial services company build a data lake on Google Cloud using Spark, Dataproc and BigQuery. The team consists of data enginers, data analysts and data scientists who work together to process raw data and enrich it by predicting fradulent transactions.
 
 # Set-up Data Lake and Dataproc
 This demo is designed to be run on Google Cloud Dataproc. Follow these steps to create create a Dataproc Cluster and then copy the notebook to your notebooks folder.
