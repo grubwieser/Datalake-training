@@ -20,9 +20,7 @@
 
 # Apache Spark on Dataproc - Datalake Demo
 
-Apache Spark on Dataproc provides features to allow you to build an end to end solution for a wide number of use cases. This demo notebook focuses on using data from a financial services company who can build a data lake on Google Cloud and show how data enginers, data analysts and data scientists can use Apache Spark can work together to build a model to predict if a customer campaign will result in a deposit being made.
-
-This notebook can be easily adapted to show to build a model to predict if a loan should be approved as shown in the video above.
+The collection of notebooks illustrates a financial services company build a data lake on Google Cloud using Spark and Dataproc. The team consists of data enginers, data analysts and data scientists who work together to process raw data and enrich it by predicting fradulent transactions.
 
 # Set-up Data Lake and Dataproc
 This demo is designed to be run on Google Cloud Dataproc. Follow these steps to create create a Dataproc Cluster and then copy the notebook to your notebooks folder.
@@ -73,13 +71,15 @@ Go the Local Disk folder in JupyterLab
 Click on the plus (+) button to open the launcher
 Open terminal and run the cmd below to copy the notebook to your cluster
 ```
-wget https://raw.githubusercontent.com/grubwieser/cloud-dataproc/v2/notebooks/examples/1_Data_Engineer.ipynb  
-wget https://raw.githubusercontent.com/grubwieser/cloud-dataproc/v2/notebooks/examples/2_Data_Analyst.ipynb
-wget https://raw.githubusercontent.com/grubwieser/cloud-dataproc/v2/notebooks/examples/3_Data_Scientist.ipynb
-wget https://raw.githubusercontent.com/grubwieser/cloud-dataproc/v2/notebooks/examples/4_Data_Ops.ipynb
+wget https://raw.githubusercontent.com/grubwieser/Datalake-training/main/1_Data_Engineer.ipynb
+wget https://raw.githubusercontent.com/grubwieser/Datalake-training/main/2_Data_Analyst.ipynb
+wget https://raw.githubusercontent.com/grubwieser/Datalake-training/main/3_Data_Scientist.ipynb
+wget https://raw.githubusercontent.com/grubwieser/Datalake-training/main/4_Data_Ops.ipynb
 ```
 ## 5 - Run example code in the following notebook order 
+```
 1_Data_Engineer.ipynb - Convert CSV and store in BigQuery 
 2_Data_Analyst.ipynb - Run SQL on tables and plot data
 3_Data_Scientist.ipynb - Create ML models with Spark
 4_Data_Ops.ipynb - Deploy Spark pipeline using Dataproc Workflows
+```
