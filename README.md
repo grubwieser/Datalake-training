@@ -52,7 +52,7 @@ Go to the Dataproc→Notebooks instances page in the Cloud Console. Enable the N
     For best performance, select a geographically close region.
     3) Zone: Select a zone within the selected region.
     4) Environment: Dataproc Hub [BETA]
-    5) Environment variables: Name=DATAPROC_CONFIGS Value=gs://datalake-vol2-data/cluster-config.yaml
+    5) Environment variables: Name=dataproc-configs Value=gs://datalake-vol2-data/cluster-config.yaml
     6) Machine configuration: Machine Type - Select the machine type for the Compute Engine. Set other Machine configuration options.
     7) Click CREATE to launch the instance.
 
