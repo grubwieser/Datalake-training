@@ -41,9 +41,9 @@ gsutil mb -l ${REGION} gs://${BUCKET_NAME}
 ## 3 - Create Dataproc Hub 
 
 1) Create a Dataproc Hub instance
-Go to the Dataproc→Notebooks instances page in the Cloud Console. Enable the Notebooks API.
+Go to the Dataproc→Notebooks instances page in the Cloud Console.
 
-2) Click NEW INSTANCE→Dataproc Hub [BETA]
+2) Click NEW INSTANCE → Dataproc Hub
 
 3) On the New notebook instance page, provide the following information:
 
@@ -51,8 +51,8 @@ Go to the Dataproc→Notebooks instances page in the Cloud Console. Enable the N
     2) Region - Select a region for the Dataproc Hub instance. Select europe-west3 if possible. Note: Dataproc clusters spawned by this Dataproc Hub instance will also be created in this region.
     For best performance, select a geographically close region.
     3) Zone: Select a zone within the selected region.
-    4) Environment: Dataproc Hub [BETA]
-    5) Environment variables: Name=dataproc-configs Value=gs://datalake-vol2-data/cluster-config.yaml
+    4) Environment: Dataproc Hub
+    5) Environment variables: Name=dataproc-configs Value=gs://2ca8b8fa-652a-11eb-8084-88e9fe60c70e/cluster-config.yaml
     6) Machine configuration: Machine Type - Select the machine type for the Compute Engine. Set other Machine configuration options.
     7) Click CREATE to launch the instance.
 
