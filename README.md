@@ -48,7 +48,7 @@ Go to the Dataproc→Notebooks instances page in the Cloud Console.
 
 3) On the New notebook instance page, provide the following information:
 
-    1) Instance name: <project-id>-Dataproc-Hub instance name.
+    1) Instance name: <project-id>-dataproc-hub instance name.
     2) Region - Select a region for the Dataproc Hub instance. Select europe-west3 if possible. Note: Dataproc clusters spawned by this Dataproc Hub instance will also be created in this region.
     For best performance, select a geographically close region.
     3) Zone: Select a zone within the selected region.
