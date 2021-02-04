@@ -38,6 +38,9 @@ GCS bucket for Dataproc Clusters and Hive Warehouse
 export BUCKET_NAME=${PROJECT_ID}-data
 gsutil mb -l ${REGION} gs://${BUCKET_NAME}
 ```
+```
+gsutil cp gs://2ca8b8fa-652a-11eb-8084-88e9fe60c70e/*.csv gs://${BUCKET_NAME}
+```
 ## 3 - Create Dataproc Hub 
 
 1) Create a Dataproc Hub instance
