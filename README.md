@@ -29,7 +29,7 @@ These steps should be run in the Google Cloud Shell
 
 ## 1 - Set env configuration
 ```
-export REGION=europe-west3
+export REGION=<your-preferred-region>
 export PROJECT_ID=<project-id>
 gcloud services enable notebooks.googleapis.com
 gcloud services enable dataproc.googleapis.com
