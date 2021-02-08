@@ -62,7 +62,7 @@ Go to the Dataproc→Notebooks instances page in the Cloud Console.
 ## 4 - Create a dataproc cluster using Dataproc Hub
 
 1) When the instance is running, click the "OPEN JUPYTERLAB" link on the Notebooks instances page to access the instance.
-2) In the cluster's configuration select standard-cluster and the appropriate zone. Click Start.
+2) In the cluster's configuration select cluster-config and the appropriate zone. Click Start.
 
 
 ## 4 - Launch JupyterLab
