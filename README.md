@@ -39,6 +39,7 @@ GCS bucket for Dataproc Clusters and temp storage.
 export BUCKET_NAME=${PROJECT_ID}-data
 gsutil mb -l ${REGION} gs://${BUCKET_NAME}
 gsutil cp gs://2ca8b8fa-652a-11eb-8084-88e9fe60c70e/*.csv gs://${BUCKET_NAME}
+gsutil cp gs://2ca8b8fa-652a-11eb-8084-88e9fe60c70e/cluster-config.yaml gs://${BUCKET_NAME}
 ```
 ## 3 - Create Dataproc Hub 
 
@@ -54,7 +55,7 @@ Go to the Dataproc→Notebooks instances page in the Cloud Console.
     For best performance, select a geographically close region.
     3) Zone: Select a zone within the selected region.
     4) Environment: Dataproc Hub
-    5) Environment variables: Name=dataproc-configs Value=gs://2ca8b8fa-652a-11eb-8084-88e9fe60c70e/cluster-config.yaml
+    5) Environment variables: Name=dataproc-configs Value=gs://${BUCKET_NAME}/cluster-config.yaml
     6) Machine configuration: Machine Type - Select the machine type for the Compute Engine. Set other Machine configuration options.
     7) Click CREATE to launch the instance.
 
