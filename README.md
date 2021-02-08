@@ -31,6 +31,7 @@ These steps should be run in the Google Cloud Shell
 ```
 export REGION=europe-west3
 export PROJECT_ID=<project-id>
+gcloud services enable notebooks.googleapis.com
 ```
 ## 2 - Create GCS bucket
 GCS bucket for Dataproc Clusters and temp storage.
