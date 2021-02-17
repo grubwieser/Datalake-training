@@ -65,7 +65,7 @@ Go to the Dataproc→Notebooks instances page in the Cloud Console.
     4) Environment: Dataproc Hub
     5) Environment variables: Name=dataproc-configs Value=gs://${BUCKET_NAME}/cluster-config.yaml
     6) Machine configuration: Machine Type - Select the machine type for the Compute Engine. Set other Machine configuration options.
-    7) Go to Permission: untick the "Use Compute Engine default service account" box --> specify datalake@<project-id>.iam.gserviceaccount.com as Service Account
+    7) Go to Permission: untick the "Use Compute Engine default service account" box --> specify datalake@]{project-id}.iam.gserviceaccount.com as Service Account
     8) Click CREATE to launch the instance.
 
 ## 4 - Create a dataproc cluster using Dataproc Hub
