@@ -57,7 +57,7 @@ Go to the Dataproc→Notebooks instances page in the Cloud Console.
 
 3) On the New notebook instance page, provide the following information:
 
-    1) Instance name: [your project-id]-dataproc-hub instance name.
+    1) Instance name: dataproc-hub instance name.
     2) Region - Select a region for the Dataproc Hub instance. Select europe-west3 if possible. Note: Dataproc clusters spawned by this Dataproc Hub instance will also be created in this region.
     For best performance, select a geographically close region.
     3) Zone: Select a zone within the selected region.
@@ -72,11 +72,9 @@ Go to the Dataproc→Notebooks instances page in the Cloud Console.
 2) In the cluster's configuration select cluster-config and the appropriate zone. Click Start.
 
 
-## 4 - Launch JupyterLab
+## 5 - Launch JupyterLab
 Once your cluster is ready go follow these steps to copy this notebook:
 
-On the Dataproc cluster UI go to web interfaces tab
-Cick on the link to open JupyterLab.
 Go the Local Disk folder in JupyterLab
 Click on the plus (+) button to open the launcher
 Open terminal and run the cmd below to copy the notebook to your cluster
@@ -85,7 +83,7 @@ wget https://raw.githubusercontent.com/grubwieser/Datalake-training/main/1_Data_
 wget https://raw.githubusercontent.com/grubwieser/Datalake-training/main/2_Data_Analyst.ipynb
 wget https://raw.githubusercontent.com/grubwieser/Datalake-training/main/3_Data_Scientist.ipynb
 ```
-## 5 - Run example code in the following notebook order 
+## 6 - Run example code in the following notebook order 
 ```
 1_Data_Engineer.ipynb - Convert CSV and store in BigQuery 
 2_Data_Analyst.ipynb - Run SQL on tables and plot data
