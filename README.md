@@ -86,12 +86,10 @@ Open terminal and run the cmd below to copy the notebook to your cluster
 wget https://raw.githubusercontent.com/grubwieser/Datalake-training/main/1_Data_Engineer.ipynb
 wget https://raw.githubusercontent.com/grubwieser/Datalake-training/main/2_Data_Analyst.ipynb
 wget https://raw.githubusercontent.com/grubwieser/Datalake-training/main/3_Data_Scientist.ipynb
-wget https://raw.githubusercontent.com/grubwieser/Datalake-training/main/4_Data_Ops.ipynb
 ```
 ## 5 - Run example code in the following notebook order 
 ```
 1_Data_Engineer.ipynb - Convert CSV and store in BigQuery 
 2_Data_Analyst.ipynb - Run SQL on tables and plot data
 3_Data_Scientist.ipynb - Create ML models with Spark
-4_Data_Ops.ipynb - Deploy Spark pipeline using Dataproc Workflows
 ```
