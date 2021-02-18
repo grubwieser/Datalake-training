@@ -33,13 +33,12 @@ export REGION=<your-preferred-region>
 export PROJECT_ID=<project-id>
 gcloud services enable notebooks.googleapis.com
 gcloud services enable dataproc.googleapis.com
-gcloud iam service-accounts create datalake
-gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID --member=serviceAccount:datalake@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role=roles/dataproc.admin
-gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID --member=serviceAccount:datalake@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role=roles/dataproc.worker
-gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID --member=serviceAccount:datalake@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role=roles/bigquery.admin
-gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID --member=serviceAccount:datalake@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role=roles/iam.serviceAccountAdmin
-gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID --member=serviceAccount:datalake@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role=roles/iam.serviceAccountUser
 
+gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID --member=serviceAccount:$(gcloud projects list --filter=$DEVSHELL_PROJECT_ID --format='value(PROJECT_NUMBER)')-compute@developer.gserviceaccount.com --role=roles/dataproc.admin
+gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID --member=serviceAccount:$(gcloud projects list --filter=$DEVSHELL_PROJECT_ID --format='value(PROJECT_NUMBER)')-compute@developer.gserviceaccount.com --role=roles/dataproc.worker
+gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID --member=serviceAccount:$(gcloud projects list --filter=$DEVSHELL_PROJECT_ID --format='value(PROJECT_NUMBER)')-compute@developer.gserviceaccount.com --role=roles/bigquery.admin
+gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID --member=serviceAccount:$(gcloud projects list --filter=$DEVSHELL_PROJECT_ID --format='value(PROJECT_NUMBER)')-compute@developer.gserviceaccount.com --role=roles/iam.serviceAccountAdmin
+gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID --member=serviceAccount:$(gcloud projects list --filter=$DEVSHELL_PROJECT_ID --format='value(PROJECT_NUMBER)')-compute@developer.gserviceaccount.com --role=roles/iam.serviceAccountUser
 ```
 ## 2 - Create GCS bucket
 GCS bucket for Dataproc Clusters and temp storage.
@@ -58,15 +57,14 @@ Go to the Dataproc→Notebooks instances page in the Cloud Console.
 
 3) On the New notebook instance page, provide the following information:
 
-    1) Instance name: <project-id>-dataproc-hub instance name.
+    1) Instance name: [your project-id]-dataproc-hub instance name.
     2) Region - Select a region for the Dataproc Hub instance. Select europe-west3 if possible. Note: Dataproc clusters spawned by this Dataproc Hub instance will also be created in this region.
     For best performance, select a geographically close region.
     3) Zone: Select a zone within the selected region.
     4) Environment: Dataproc Hub
-    5) Environment variables: Name=dataproc-configs Value=gs://${BUCKET_NAME}/cluster-config.yaml
+    5) Environment variables: Name=dataproc-configs Value=gs://[your BUCKET_NAME]/cluster-config.yaml
     6) Machine configuration: Machine Type - Select the machine type for the Compute Engine. Set other Machine configuration options.
-    7) Go to Permission: untick the "Use Compute Engine default service account" box </br> --> specify datalake@{project-id}.iam.gserviceaccount.com as Service Account
-    8) Click CREATE to launch the instance.
+    7) Click CREATE to launch the instance.
 
 ## 4 - Create a dataproc cluster using Dataproc Hub
 
